@@ -21,6 +21,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongoose": "^4.10.8",
-    "mustache-express": "^1.2.5"
+    "mustache-express": "^1.2.5",
+    "sequelize": "^4.3.2"
   }
 }
