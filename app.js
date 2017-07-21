@@ -7,6 +7,7 @@ const generalRouter = require('./routes/general');
 const apiRouter = require('./routes/api');
 const Snippet = require('./models/snippet.js');
 const User = require('./models/user.js');
+// const Bootstrap = require('bootstrap');
 // const passport = require('passport');
 // const BasicStrategy = require('passport-http').BasicStrategy;
 // const bcrypt = require('bcrypt');
