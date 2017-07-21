@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <input type="text" name="searchSnips" value="" placeholder="Search">
+    </header>
+  </h2 class="sub-header">Your Snippets</h2>
+    <div class="snip-container">
+      {{#snippetBlock}}
+        <div class="snippet-block">
+          <h3 class="snip-title">{{title}}</h3>
+          <p class="snip-body">{{body}}</p>
+          <p class="snip-notes">{{notes}}</p>
+          <p class="language">{{language}}</p>
+          <ul class="tags">
+            <li>{{tags.tagContent}}</li>
+          </ul>
+        </div>
+      {{/snippetBlock}}
+    </div>
+    <footer class="snip-footer">
+      <h3>RagyCo.inc</h3>
+    </footer>
+  </body>
+</html>
