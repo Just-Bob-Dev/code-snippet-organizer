@@ -4,12 +4,15 @@
 <head>
   <meta charset="utf-8">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/main.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>  <link rel="stylesheet" href="/css/main.css">
+  <script>hljs.initHighlightingOnLoad();</script>
   <title>Home</title>
 </head>
 
 <body>
+  <div class="container">
   <header>
     <input type="text" name="searchSnips" value="" placeholder="Search">
     <p><a href="/app/newSnip">Create Snippet</a></p>
@@ -18,13 +21,16 @@
   <div class="snip-container">
     {{#snippetBlock}}
       <div class="card" style= {{width: 20 + 'em'}}>
-        <a href="/app/snip/{{_id}}">
+        <a class="anchor_button" href="/app/snip/{{_id}}">
         <div class="card-block">
           <h4 class="card-title">{{title}}</h4>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{body}}</li>
-            <li class="list-group-item">{{notes}}</li>
-            <li class="list-group-item">{{language}}</li>
+          <label class="content-label">Body:</label>
+          <pre><code class="{{language}}">{{body}}</code></pre>
+          <label class="content-label">Notes:</label>
+          <span class="notes_output">{{notes}}</span>
+          <label class="content-label">Language:</label>
+          <span class="language">{{language}}</span>
+          <label class="content-label">Tags:</label>
             <ul>
             {{#tags}}
               <li class="list-group-item">{{tagContent}}</li>
@@ -39,6 +45,7 @@
     <footer class="snip-footer">
       <h3 class='footer-text'>RagyCo.inc</h3>
     </footer>
+  </div>
 </body>
 
 </html>

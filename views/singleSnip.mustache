@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>  <link rel="stylesheet" href="/css/main.css">
+  <script>hljs.initHighlightingOnLoad();</script>
   <title>Snip</title>
 </head>
 
 <body>
+  <div class="container">
   <header>
     <p><a href="/app/newSnip">Create Snippet</a></p>
     <a href="/app/Home">Home</a>
@@ -22,7 +23,7 @@
         <div class="card-block">
           <h4 class="card-title">{{title}}</h4>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{body}}</li>
+            <pre><code class="{{language}}">{{body}}</code></pre>
             <li class="list-group-item">{{notes}}</li>
             <li class="list-group-item">{{language}}</li>
             <ul>
@@ -39,6 +40,7 @@
     <footer class="snip-footer">
       <h3 class='footer-text'>RagyCo.inc</h3>
     </footer>
+  </div>
 </body>
 
 </html>
