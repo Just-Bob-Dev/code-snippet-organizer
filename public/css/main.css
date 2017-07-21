@@ -1,0 +1,32 @@
+body {
+  background-color: lightblue;
+}
+
+.snip-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex-basis: 30%;
+  margin: 2% 1.25% 2% 1.25%;
+}
+
+.card-block {
+  background-color: white;
+}
+
+
+.snip-footer {
+  background-color: black;
+  color: white;
+  margin: 0;
+  bottom: 100;
+  padding: 0;
+}
+
+.footer-text {
+  text-align: center;
+}
