@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .container {
   z-index: 1;
@@ -8,9 +12,8 @@
   background-image: url('./images/greyscale-hive.png');
   background-repeat: no-repeat;
   background-size: cover;
-  /*background-position: */
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.8;
   top: 0;
   left: 0;
   bottom: 0;
@@ -46,12 +49,13 @@ footer {
   background-color: black;
   color: white;
   margin: 0;
-  padding: 5%;
+  height: 10vh;
   width: 100%;
 }
 
 .footer-text {
   text-align: center;
+  padding-top: 2%;
 }
 
 .anchor_button {
